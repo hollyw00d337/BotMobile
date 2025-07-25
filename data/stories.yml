@@ -1,0 +1,166 @@
+version: "3.1"
+
+stories:
+
+- story: Inicio de conversación y selección de portabilidad
+  steps:
+    - intent: saludar
+    - action: action_session_start
+    - intent: seleccionar_opcion
+      entities:
+        - numero_opcion: "1"
+    - action: action_elegir_opcion
+
+- story: Seleccionar otras opciones del menú principal
+  steps:
+    - slot_was_set:
+        - estado_menu: "menu_principal"
+    - intent: seleccionar_opcion
+      entities:
+        - numero_opcion: "2"
+    - action: action_elegir_opcion
+
+- story: Navegar en submenu portabilidad
+  steps:
+    - slot_was_set:
+        - estado_menu: "submenu_portabilidad"
+    - intent: seleccionar_opcion
+      entities:
+        - numero_opcion: "1"
+    - action: action_elegir_opcion
+
+- story: Volver al menu principal desde submenu
+  steps:
+    - slot_was_set:
+        - estado_menu: "submenu_portabilidad"
+    - intent: seleccionar_opcion
+      entities:
+        - numero_opcion: "0"
+    - action: action_elegir_opcion
+
+- story: Regresar al menú principal con comando
+  steps:
+    - intent: regresar_menu
+    - action: action_elegir_opcion
+
+- story: Despedida
+  steps:
+    - intent: despedida
+    - action: utter_despedida
+
+- story: Navegar al submenu NIP desde portabilidad
+  steps:
+    - slot_was_set:
+        - estado_menu: "submenu_portabilidad"
+    - intent: seleccionar_opcion
+      entities:
+        - numero_opcion: "1"
+    - action: action_elegir_opcion
+
+- story: Seleccionar opciones en submenu NIP
+  steps:
+    - slot_was_set:
+        - estado_menu: "submenu_nip"
+    - intent: seleccionar_opcion
+      entities:
+        - numero_opcion: "1"
+    - action: action_elegir_opcion
+
+- story: Navegar en submenu avanzar NIP
+  steps:
+    - slot_was_set:
+        - estado_menu: "submenu_avanzar_nip"
+    - intent: seleccionar_opcion
+      entities:
+        - numero_opcion: "1"
+    - action: action_elegir_opcion
+
+- story: Volver al menu principal desde submenu NIP
+  steps:
+    - slot_was_set:
+        - estado_menu: "submenu_nip"
+    - intent: seleccionar_opcion
+      entities:
+        - numero_opcion: "0"
+    - action: action_elegir_opcion
+
+- story: Estados de texto libre - cualquier intent va a action_elegir_opcion
+  steps:
+    - slot_was_set:
+        - estado_menu: "registro_nombre"
+    - intent: despedida
+    - action: action_elegir_opcion
+
+- story: Estados de texto libre - informar va a action_elegir_opcion
+  steps:
+    - slot_was_set:
+        - estado_menu: "registro_nombre"
+    - intent: informar
+    - action: action_elegir_opcion
+
+- story: Estados de texto libre - seleccionar_opcion va a action_elegir_opcion
+  steps:
+    - slot_was_set:
+        - estado_menu: "registro_nombre"
+    - intent: seleccionar_opcion
+    - action: action_elegir_opcion
+
+# Historias para registro_correo
+- story: Estados de texto libre - registro_correo con informar
+  steps:
+    - slot_was_set:
+        - estado_menu: "registro_correo"
+    - intent: informar
+    - action: action_elegir_opcion
+
+- story: Estados de texto libre - registro_correo con seleccionar_opcion
+  steps:
+    - slot_was_set:
+        - estado_menu: "registro_correo"
+    - intent: seleccionar_opcion
+    - action: action_elegir_opcion
+
+# Historias para registro_numero
+- story: Estados de texto libre - registro_numero con informar
+  steps:
+    - slot_was_set:
+        - estado_menu: "registro_numero"
+    - intent: informar
+    - action: action_elegir_opcion
+
+- story: Estados de texto libre - registro_numero con seleccionar_opcion
+  steps:
+    - slot_was_set:
+        - estado_menu: "registro_numero"
+    - intent: seleccionar_opcion
+    - action: action_elegir_opcion
+
+# Historias para capturar_nip
+- story: Estados de texto libre - capturar_nip con informar
+  steps:
+    - slot_was_set:
+        - estado_menu: "capturar_nip"
+    - intent: informar
+    - action: action_elegir_opcion
+
+- story: Estados de texto libre - capturar_nip con seleccionar_opcion
+  steps:
+    - slot_was_set:
+        - estado_menu: "capturar_nip"
+    - intent: seleccionar_opcion
+    - action: action_elegir_opcion
+
+# Historias para validar_imei
+- story: Estados de texto libre - validar_imei con informar
+  steps:
+    - slot_was_set:
+        - estado_menu: "validar_imei"
+    - intent: informar
+    - action: action_elegir_opcion
+
+- story: Estados de texto libre - validar_imei con seleccionar_opcion
+  steps:
+    - slot_was_set:
+        - estado_menu: "validar_imei"
+    - intent: seleccionar_opcion
+    - action: action_elegir_opcion

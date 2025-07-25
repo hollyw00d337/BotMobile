@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  rasa:
+    image: hollyw00d337/botmobile:latest
+    container_name: spotybot-mobile
+    command: >
+      rasa run
+      --enable-api
+      --debug
+      --port 5005
+      --cors "*"
+      --credentials /tmp/credentials.yml
+      --endpoints /tmp/endpoints.yml
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./credentials.yml:/app/credentials.yml
+      - ./endpoints.yml:/app/endpoints.yml
+    restart: unless-stopped
+  actions:
+    image: hollyw00d337/botmobile:latest
+    container_name: spotybot-mobile-actions
+    command: rasa run actions
+    ports:
+      - "5055:5055"
+    restart: unless-stopped

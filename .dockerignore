@@ -1,0 +1,82 @@
+# Spotybot Docker Ignore
+# Archivos que no deben incluirse en la imagen Docker
+
+# Archivos de sistema
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales y logs
+*.log
+logs/
+*.tmp
+.rasa/
+
+
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Entornos virtuales
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Git
+.git
+.gitignore
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Archivos de configuración local
+.local
+.cache
+
+# Archivos de backup
+*.bak
+*.backup
+*~
+
+# Archivos de documentación (opcional)
+README.md
+*.md
+
+# Certificados (por seguridad)
+*.pem
+*.key
+*.crt
+
+# Archivos de configuración sensibles
+credentials.yml.bak
+.secrets/

@@ -1,0 +1,26 @@
+# Configuration for Rasa - Optimized for faster training
+recipe: default.v1
+language: es
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+  epochs: 20
+  constrain_similarities: true
+- name: EntitySynonymMapper
+- name: RegexEntityExtractor
+  use_lookup_tables: false
+  use_regexes: true
+  use_word_boundaries: true
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: TEDPolicy
+  max_history: 5
+  epochs: 50
+
+assistant_id: spotybot-mobile-v1

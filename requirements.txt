@@ -1,0 +1,29 @@
+# Spotybot Requirements
+# Dependencias principales para el bot de telecomunicaciones
+
+# Rasa Framework - Última versión estable de la serie 3.6
+rasa==3.6.21
+rasa-sdk==3.6.2
+
+# Dependencias de NLP
+spacy>=3.4.0,<3.7
+https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.4.0/es_core_news_sm-3.4.0.tar.gz
+
+# Dependencias de procesamiento (ya incluidas en Rasa)
+numpy>=1.21.0
+scikit-learn>=1.0.0
+
+# Dependencias de servidor y API
+pyyaml>=5.4.0
+
+# Dependencias de base de datos
+sqlalchemy>=1.4.0,<2.0
+psycopg2-binary>=2.9.0
+alembic>=1.7.0
+
+# Integración con Node-RED y APIs externas
+aiohttp>=3.8.0
+
+# Utilidades
+python-dotenv>=0.19.0
+coloredlogs>=15.0

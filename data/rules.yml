@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: Iniciar sesión
+  steps:
+    - intent: saludar
+    - action: action_session_start
+
+- rule: Regresar al menú principal
+  steps:
+    - intent: regresar_menu
+    - action: action_elegir_opcion

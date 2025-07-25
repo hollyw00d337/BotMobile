@@ -1,0 +1,113 @@
+version: "3.1"
+
+nlu:
+- regex: numero_opcion
+  examples: |
+    - [0-9]
+
+- intent: seleccionar_opcion
+  examples: |
+    - [0](numero_opcion)
+    - [1](numero_opcion)
+    - [2](numero_opcion)
+    - [3](numero_opcion)
+    - [4](numero_opcion)
+    - [5](numero_opcion)
+    - opción [1](numero_opcion)
+    - opción [2](numero_opcion)
+    - selecciono [1](numero_opcion)
+    - quiero [1](numero_opcion)
+    - elijo [1](numero_opcion)
+
+- intent: saludar
+  examples: |
+    - hola
+    - buenas
+    - buenos días
+    - buenas tardes
+    - hi
+    - hello
+    - holi
+    - que tal
+    - saludos
+    - buenas noches
+
+- intent: despedida
+  examples: |
+    - adiós
+    - bye
+    - hasta luego
+    - nos vemos
+    - chau
+    - gracias
+    - gracias adiós
+    - hasta la vista
+    - me voy
+
+- intent: regresar_menu
+  examples: |
+    - menu
+    - menú
+    - menu principal
+    - menú principal
+    - volver
+    - regresar
+    - atrás
+    - principal
+
+- intent: informar
+  examples: |
+    - Juan Pérez García
+    - María González López
+    - Pedro Rodríguez Martínez
+    - Ana Isabel Fernández
+    - Carlos Eduardo Sánchez
+    - Juan
+    - María
+    - Pedro
+    - Ana
+    - Carlos
+    - Juan Pérez
+    - María González
+    - Pedro Rodríguez
+    - Ana Fernández
+    - Carlos Sánchez
+    - Luis Fernando
+    - Carmen Rosa
+    - José Antonio
+    - Ana María
+    - Juan Carlos
+    - josé luis
+    - maría teresa
+    - juan antonio
+    - ana gabriela
+    - luis miguel
+    - juan.perez@email.com
+    - maria@gmail.com
+    - pedro.rodriguez@hotmail.com
+    - ana.fernandez@yahoo.com
+    - 6141234567
+    - 5551234567
+    - 3331234567
+    - 123456789012345
+    - 987654321098765
+    - mi nombre es Juan
+    - me llamo María
+    - soy Pedro
+    - mi correo es juan@email.com
+    - mi email es maria@gmail.com
+    - mi número es 6141234567
+    - Hugo Alfredo Diaz Infante Lopez
+    - Pablo Gael Torres
+    - Hugo Diaz
+    - Pablo Torres
+    - Hugo
+    - Pablo
+    - Hugo Diaz Infante
+    - Pablo Gael
+    - Hugo Diaz Infante Lopez
+    - Pablo Gael Torres
+    - Albertano Lopez Medina
+    - Me llamo Albertano
+    - Mi nombre es Albertano
+    

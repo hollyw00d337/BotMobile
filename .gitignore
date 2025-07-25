@@ -1,0 +1,13 @@
+# Archivos de sistema
+.DS_Store
+
+# Caché de Rasa
+.rasa/cache/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Modelos entrenados
+models/

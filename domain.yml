@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - saludar
+  - despedida
+  - seleccionar_opcion
+  - regresar_menu
+  - informar
+
+entities:
+  - numero_opcion
+
+slots:
+  estado_menu:
+    type: text
+    initial_value: menu_principal
+    influence_conversation: true
+    mappings:
+      - type: custom
+  
+  nombre_usuario:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  correo_usuario:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  nip_usuario:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  imei_usuario:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  numero_telefono:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+responses:
+  utter_despedida:
+    - text: "¡Hasta la vista! 👋 Espero haberte ayudado. Regresa cuando gustes."
+
+actions:
+  - action_session_start
+  - action_elegir_opcion
+  - action_default_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
