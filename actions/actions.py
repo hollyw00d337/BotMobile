@@ -15,8 +15,11 @@ class ActionSessionStart(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
+        # Enviar imagen de bienvenida primero
+        dispatcher.utter_message(image=ImageConfig.BIENVENIDA_BOTMOBILE)
+        
         mensaje_menu = """
-👋 ¡Hola! Soy Spotty, tu asistente móvil ☕
+👋 ¡Hola! Soy BotMobile, tu asistente móvil ☕
 Estoy aquí para ayudarte a conectarte fácil, rápido y sin interrupciones 📶
 
 📦 Tenemos paquetes para todos los usos, con cobertura nacional.
@@ -51,10 +54,8 @@ class ActionElegirOpcion(Action):
         
         print(f"DEBUG: estado_actual={estado_actual}, numero_opcion={numero_opcion}, intent={intent}")
         
-        # Estados que no requieren número de opción (manejan texto libre)
         estados_texto_libre = ["validar_imei", "registro_nombre", "registro_correo", "registro_numero", "capturar_nip"]
         
-        # Manejar despedida en estados donde NO es texto libre
         if intent == "despedida" and estado_actual not in estados_texto_libre:
             dispatcher.utter_message(text="¡Hasta la vista! 👋 Espero haberte ayudado. Regresa cuando gustes.")
             return []
@@ -70,7 +71,6 @@ class ActionElegirOpcion(Action):
         elif estado_actual == "capturar_nip":
             return self._manejar_captura_nip(dispatcher, tracker)
         
-        # Si no hay número de opción y estamos en un estado que SÍ lo requiere, volver al menú principal
         if not numero_opcion and estado_actual not in estados_texto_libre:
             return self._mostrar_menu_principal(dispatcher)
         
@@ -102,8 +102,11 @@ class ActionElegirOpcion(Action):
             return self._mostrar_menu_principal(dispatcher)
     
     def _mostrar_menu_principal(self, dispatcher):
+        # Enviar imagen de bienvenida primero
+        dispatcher.utter_message(image=ImageConfig.BIENVENIDA_BOTMOBILE)
+        
         mensaje_menu = """
-👋 ¡Hola! Soy Spotty, tu asistente móvil ☕
+👋 ¡Hola! Soy BotMobile, tu asistente móvil ☕
 Estoy aquí para ayudarte a conectarte fácil, rápido y sin interrupciones 📶
 
 📦 Tenemos paquetes para todos los usos, con cobertura nacional.
@@ -287,6 +290,9 @@ Opción no válida. Por favor elige:
             return self._mostrar_menu_principal(dispatcher)
         
         elif numero_opcion == "1":
+            # Enviar imagen de instrucciones para obtener NIP
+            dispatcher.utter_message(image=ImageConfig.COMO_OBTENER_NIP)
+            
             mensaje_instrucciones = """
 📱 ¡Listo para pedir tu NIP de portabilidad!
 
@@ -788,6 +794,9 @@ O escribe "0" para volver al menú principal.
         # Validar que el NIP tenga exactamente 4 dígitos
         if len(nip_numeros) == 4:
             # NIP válido - guardarlo y continuar al IMEI
+            # Enviar imagen de instrucciones para obtener IMEI
+            dispatcher.utter_message(image=ImageConfig.COMO_OBTENER_IMEI)
+            
             mensaje_confirmacion = f"""
 ✅ ¡Perfecto! Tu NIP **{nip_numeros}** ha sido registrado correctamente.
 

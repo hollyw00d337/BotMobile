@@ -15,7 +15,7 @@ class ImageConfig:
     COMO_OBTENER_IMEI = "https://raw.githubusercontent.com/hollyw00d337/BotMobile/main/assets/images/como-obtener-imei.jpeg"
     
     # Imágenes de bienvenida
-    BIENVENIDA_SPOTTY = "https://raw.githubusercontent.com/hollyw00d337/BotMobile/main/assets/images/bienvenida-spotty.jpeg"
+    BIENVENIDA_BOTMOBILE = "https://raw.githubusercontent.com/hollyw00d337/BotMobile/main/assets/images/bienvenida-spotty.jpeg"
     
     @classmethod
     def get_image_url(cls, image_name: str) -> str:
