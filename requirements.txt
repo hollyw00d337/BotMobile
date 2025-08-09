@@ -1,4 +1,4 @@
-# Spotybot Requirements
+# BotMobile Requirements
 # Dependencias principales para el bot de telecomunicaciones
 
 # Rasa Framework - Última versión estable de la serie 3.6
@@ -15,6 +15,7 @@ scikit-learn>=1.0.0
 
 # Dependencias de servidor y API
 pyyaml>=5.4.0
+requests>=2.28.0
 
 # Dependencias de base de datos
 sqlalchemy>=1.4.0,<2.0

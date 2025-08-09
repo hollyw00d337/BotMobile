@@ -1,27 +1,114 @@
 version: '3.9'
 
+networks:
+  botmobile-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
 services:
+  # Redis para persistencia de conversaciones
+  redis:
+    image: redis:7-alpine
+    container_name: botmobile-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    networks:
+      botmobile-network:
+        ipv4_address: 172.20.0.10
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  # Servidor principal de Rasa
   rasa:
-    image: hollyw00d337/botmobile:latest
-    container_name: spotybot-mobile
+    image: hollyw00d337/botmobilev1.1:latest
+    container_name: botmobile-rasa
     command: >
       rasa run
       --enable-api
-      --debug
       --port 5005
-      --cors "*"
-      --credentials /tmp/credentials.yml
-      --endpoints /tmp/endpoints.yml
-    ports:
-      - "5005:5005"
+      --credentials /app/credentials_production.yml
+      --endpoints /app/endpoints_production.yml
     volumes:
-      - ./credentials.yml:/app/credentials.yml
-      - ./endpoints.yml:/app/endpoints.yml
+      - ./credentials_production.yml:/app/credentials_production.yml
+      - ./endpoints_production.yml:/app/endpoints_production.yml
+      - ./assets:/app/assets
     restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+      actions:
+        condition: service_started
+    networks:
+      botmobile-network:
+        ipv4_address: 172.20.0.20
+    environment:
+      - RASA_ENV=production
+      - RASA_DUCKLING_HTTP_URL=http://duckling:8000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5005/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Servidor de acciones customizadas
   actions:
-    image: hollyw00d337/botmobile:latest
-    container_name: spotybot-mobile-actions
-    command: rasa run actions
-    ports:
-      - "5055:5055"
+    image: hollyw00d337/botmobilev1.1:latest
+    container_name: botmobile-actions
+    command: rasa run actions --port 5055
     restart: unless-stopped
+    networks:
+      botmobile-network:
+        ipv4_address: 172.20.0.30
+    environment:
+      - RASA_SDK_ENDPOINT_URL=http://actions:5055/webhook
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5055/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # Nginx como proxy reverso
+  nginx:
+    image: nginx:alpine
+    container_name: botmobile-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - nginx_logs:/var/log/nginx
+      # Para SSL (descomenta cuando tengas certificados):
+      # - ./ssl:/etc/ssl:ro
+    restart: unless-stopped
+    depends_on:
+      rasa:
+        condition: service_healthy
+    networks:
+      botmobile-network:
+        ipv4_address: 172.20.0.40
+    environment:
+      - NGINX_WORKER_PROCESSES=auto
+      - NGINX_WORKER_CONNECTIONS=1024
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  redis_data:
+    driver: local
+  nginx_logs:
+    driver: local

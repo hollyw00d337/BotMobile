@@ -55,6 +55,33 @@ nlu:
     - atrás
     - principal
 
+- intent: informar_compania
+  examples: |
+    - COMPANIA_DETECTADA [Telcel](compania_operador)
+    - COMPANIA_DETECTADA [AT&T](compania_operador)
+    - COMPANIA_DETECTADA [Movistar](compania_operador)
+    - COMPANIA_DETECTADA [Unefon](compania_operador)
+    - COMPANIA_DETECTADA [Virgin](compania_operador)
+    - COMPANIA_DETECTADA [Bait](compania_operador)
+    - COMPANIA_DETECTADA [Flash Mobile](compania_operador)
+    - COMPANIA_DETECTADA [Weex](compania_operador)
+    - COMPANIA_DETECTADA Telcel
+    - COMPANIA_DETECTADA AT&T
+    - COMPANIA_DETECTADA Movistar
+    - COMPANIA_DETECTADA Unefon
+    - COMPANIA_DETECTADA Virgin
+    - COMPANIA_DETECTADA Bait
+    - COMPANIA_DETECTADA Flash Mobile
+    - COMPANIA_DETECTADA Weex
+    - COMPANIA_DETECTADA [Telcel](compania_operador) NUMERO 6141234567
+    - COMPANIA_DETECTADA [AT&T](compania_operador) NUMERO 5551234567
+    - COMPANIA_DETECTADA [Movistar](compania_operador) NUMERO 5551234567
+    - COMPANIA_DETECTADA [Unefon](compania_operador) NUMERO 5551234567
+    - COMPANIA_DETECTADA [Virgin](compania_operador) NUMERO 5551234567
+    - COMPANIA_DETECTADA Telcel NUMERO 6141234567
+    - COMPANIA_DETECTADA AT&T NUMERO 5551234567
+    - COMPANIA_DETECTADA Movistar NUMERO 5551234567
+
 - intent: informar
   examples: |
     - Juan Pérez García
@@ -86,17 +113,20 @@ nlu:
     - maria@gmail.com
     - pedro.rodriguez@hotmail.com
     - ana.fernandez@yahoo.com
-    - 6141234567
-    - 5551234567
-    - 3331234567
-    - 123456789012345
-    - 987654321098765
+    - correo@ejemplo.com
+    - usuario123@gmail.com
     - mi nombre es Juan
     - me llamo María
     - soy Pedro
     - mi correo es juan@email.com
     - mi email es maria@gmail.com
     - mi número es 6141234567
+    - mi teléfono es 5551234567
+    - 6141234567
+    - 5551234567
+    - 1234
+    - 5678
+    - 123456789012345
     - Hugo Alfredo Diaz Infante Lopez
     - Pablo Gael Torres
     - Hugo Diaz
@@ -105,9 +135,40 @@ nlu:
     - Pablo
     - Hugo Diaz Infante
     - Pablo Gael
-    - Hugo Diaz Infante Lopez
-    - Pablo Gael Torres
     - Albertano Lopez Medina
     - Me llamo Albertano
     - Mi nombre es Albertano
+    - Soy Juan Carlos
+    - Mi correo electrónico es ejemplo@correo.com
+    - Te doy mi número 6141234567
+    - Aquí tienes mi información
+    - Este es mi dato
+    - Mi información personal
+    - Pablo Torres
+    - Hugo
+    - Pablo
+    - Hugo Diaz Infante
+    - Pablo Gael
+    - Albertano Lopez Medina
+    - Me llamo Albertano
+    - Mi nombre es Albertano
+
+# Lookup table para compania_operador
+- lookup: compania_operador
+  examples: |
+    - Telcel
+    - AT&T
+    - Movistar
+    - Unefon
+    - Virgin
+    - Bait
+    - Flash Mobile
+    - Weex
+    - Pilón
+    - Cierto
+    - Virgin Mobile
+    - Flash
+    - Telmex
+    - at t
+    - att
     

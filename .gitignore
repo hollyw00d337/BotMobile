@@ -9,5 +9,18 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Modelos entrenados
-models/
+# Modelos entrenados (mantener solo el más reciente)
+models/*.tar.gz
+
+# Archivos temporales y de prueba
+temp_*.json
+test_*.json
+test_*.ps1
+test_*.py
+test_*.bat
+
+# Outputs temporales
+pdf_outputs/*.pdf
+
+# Logs
+*.log

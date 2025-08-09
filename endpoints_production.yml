@@ -1,0 +1,39 @@
+# Endpoints de producción para BotMobile
+# Configuración con Redis para persistencia
+
+# Action endpoint para acciones customizadas
+action_endpoint:
+  url: "http://actions:5055/webhook"
+
+# Tracker store - Redis para persistencia de conversaciones
+tracker_store:
+  type: redis
+  url: "redis://redis:6379"
+  db: 0
+  password: null
+  record_exp: 30000  # Conversaciones expiran en 30000 segundos (~8 horas)
+  key_prefix: "botmobile:"
+
+# Event broker - Redis para eventos y analytics
+event_broker:
+  type: redis
+  url: "redis://redis:6379" 
+  db: 1
+  password: null
+  queue: "rasa_production_events"
+
+# Lock store - Redis para sincronización entre instancias
+lock_store:
+  type: redis
+  url: "redis://redis:6379"
+  db: 2
+  password: null
+
+# Modelo de NLU (si usas servidor externo)
+# nlg:
+#   url: "http://localhost:5002/nlg"
+
+# Para debugging en producción (opcional)
+# model_endpoint:
+#   url: "http://localhost:5005/model"
+#   wait_time_between_pulls: 10

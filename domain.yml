@@ -6,9 +6,11 @@ intents:
   - seleccionar_opcion
   - regresar_menu
   - informar
+  - informar_compania
 
 entities:
   - numero_opcion
+  - compania_operador
 
 slots:
   estado_menu:
@@ -53,14 +55,98 @@ slots:
     mappings:
       - type: custom
 
+  compania_operador:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+      - type: custom
+
 responses:
   utter_despedida:
     - text: "¡Hasta la vista! 👋 Espero haberte ayudado. Regresa cuando gustes."
+
+  utter_saludo_personalizado:
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Telcel
+      text: "🎯 ¡Hola! Detecté que vienes de Telcel. Te ayudo con tu portabilidad a BotMobile de manera súper fácil.\n\n💰 **¡Ahorra $80 pesos al mes!**\nTelcel: $300/mes por 8GB\nBotMobile: $220/mes por 72GB\n\n¿Te interesa conocer más?"
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: AT&T
+      text: "🎯 ¡Hola! Veo que eres cliente de AT&T. Te explico cómo cambiarte a BotMobile paso a paso.\n\n💰 **¡Ahorra $180 pesos al mes!**\nAT&T: $400/mes por 20GB + HBO Max\nBotMobile: $220/mes por 72GB + Netflix + Disney+ + Prime\n\n¿Quieres saber cómo hacer el cambio?"
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Movistar
+      text: "🎯 ¡Perfecto! Eres de Movistar. Conozco muy bien el proceso para cambiarte a BotMobile.\n\n💰 **Mejor oferta garantizada:**\nMovistar: $250/mes por 12GB + Disney+\nBotMobile: $220/mes por 72GB + Netflix + Disney+ + Prime\n\n¿Te gustaría conocer los pasos?"
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Unefon
+      text: "🎯 ¡Hola! Vienes de Unefon. Te ayudo a mejorar tu plan con BotMobile.\n\n💰 **Upgrade completo:**\nUnefon: $200/mes por 6GB\nBotMobile: $220/mes por 72GB + streaming\n\n¿Solo $20 pesos más por 12x más datos!"
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Virgin
+      text: "🎯 ¡Excelente! Eres de Virgin Mobile. Te muestro cómo mejorar con BotMobile.\n\n💰 **Más por menos:**\nVirgin: $180/mes por 4GB\nBotMobile: $220/mes por 72GB + plataformas\n\n¿Te interesa conocer el proceso de cambio?"
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Bait
+      text: "🎯 ¡Perfecto! Vienes de Bait. Te ayudo con tu portabilidad a BotMobile.\n\n💰 **BotMobile te ofrece:**\n📱 72GB por solo $220/mes\n🎬 Netflix + Disney+ + Prime incluido\n📶 Cobertura nacional garantizada\n\n¿Te gustaría conocer cómo hacer el cambio?"
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Flash Mobile
+      text: "🎯 ¡Perfecto! Vienes de Flash Mobile. Te ayudo con tu portabilidad a BotMobile.\n\n💰 **BotMobile te ofrece:**\n📱 72GB por solo $220/mes\n🎬 Netflix + Disney+ + Prime incluido\n📶 Cobertura nacional garantizada\n\n¿Te gustaría conocer cómo hacer el cambio?"
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Weex
+      text: "🎯 ¡Perfecto! Vienes de Weex. Te ayudo con tu portabilidad a BotMobile.\n\n💰 **BotMobile te ofrece:**\n📱 72GB por solo $220/mes\n🎬 Netflix + Disney+ + Prime incluido\n📶 Cobertura nacional garantizada\n\n¿Te gustaría conocer cómo hacer el cambio?"
+    - text: "🎯 ¡Perfecto! Te ayudo con tu portabilidad a BotMobile.\n\n💰 **BotMobile te ofrece:**\n📱 72GB por solo $220/mes\n🎬 Netflix + Disney+ + Prime incluido\n📶 Cobertura nacional garantizada\n\n¿Te gustaría conocer cómo hacer el cambio?"
+
+  utter_nip_personalizado:
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Telcel
+      text: "📱 **Obtener tu NIP de Telcel:**\n\n1️⃣ Marca *133# desde tu Telcel\n2️⃣ Selecciona \"Portabilidad numérica\"\n3️⃣ Recibirás tu código por SMS\n\n⚡ ¡Es súper rápido! El proceso toma menos de 2 minutos."
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: AT&T
+      text: "📱 **Obtener tu NIP de AT&T:**\n\n1️⃣ Llama al *611 desde tu AT&T\n2️⃣ Solicita \"código de portabilidad\"\n3️⃣ O usa la app MiAT&T > Configuración\n\n🔒 Necesitarás verificar tu identidad con INE."
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Movistar
+      text: "📱 **Obtener tu NIP de Movistar:**\n\n1️⃣ Marca *611 desde tu Movistar\n2️⃣ Di \"quiero mi código NIP\"\n3️⃣ O envía SMS \"NIP\" al 3991\n\n💡 Lo recibirás al instante por SMS."
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Bait
+      text: "📱 **Obtener tu NIP de Bait:**\n\n1️⃣ Marca *264 desde tu Bait\n2️⃣ O llama al 264 desde otro teléfono\n3️⃣ Solicita tu \"código de portabilidad\"\n\n⏱️ El NIP llega por SMS en 5-15 minutos."
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Flash Mobile
+      text: "📱 **Obtener tu NIP de Flash Mobile:**\n\n1️⃣ Marca *843 desde tu Flash\n2️⃣ O llama al 843 desde otro teléfono\n3️⃣ Solicita tu \"código de portabilidad\"\n\n⏱️ El NIP llega por SMS en 5-15 minutos."
+    - condition:
+        - type: slot
+          name: compania_operador
+          value: Weex
+      text: "📱 **Obtener tu NIP de Weex:**\n\n1️⃣ Marca *50 desde tu Weex\n2️⃣ O llama al 050 desde otro teléfono\n3️⃣ Solicita tu \"código de portabilidad\"\n\n⏱️ El NIP llega por SMS en 5-15 minutos."
+    - text: "📱 **Obtener tu NIP de tu operador:**\n\n1️⃣ Marca *051 desde tu celular\n2️⃣ Solicita tu \"código de portabilidad\"\n3️⃣ También puedes llamar a atención a clientes\n\n📞 **Números comunes:**\n• Bait: *264 o 264\n• Flash Mobile: *843 o 843\n• Weex: *50 o 050\n• OMV genéricos: *051\n\n⏱️ El NIP generalmente llega en 5-15 minutos."
 
 actions:
   - action_session_start
   - action_elegir_opcion
   - action_default_fallback
+  - action_procesar_compania
 
 session_config:
   session_expiration_time: 60

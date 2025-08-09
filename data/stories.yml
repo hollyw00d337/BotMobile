@@ -164,3 +164,9 @@ stories:
         - estado_menu: "validar_imei"
     - intent: seleccionar_opcion
     - action: action_elegir_opcion
+
+# Historia para detección de compañía desde Node-RED
+- story: Detección automática de compañía desde Node-RED
+  steps:
+    - intent: informar_compania
+    - action: action_procesar_compania

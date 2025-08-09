@@ -2,10 +2,16 @@ version: "3.1"
 
 rules:
 
-- rule: Iniciar sesión
+- rule: Iniciar sesión con saludo normal
   steps:
     - intent: saludar
     - action: action_session_start
+
+- rule: Procesar compañía detectada por Node-RED después de session start
+  steps:
+    - action: action_session_start
+    - intent: informar_compania
+    - action: action_procesar_compania
 
 - rule: Regresar al menú principal
   steps:
