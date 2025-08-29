@@ -1,33 +1,20 @@
 # Endpoints de producción para BotMobile
-# Configuración con Redis para persistencia
+# Configuración simplificada sin Redis
 
 # Action endpoint para acciones customizadas
 action_endpoint:
-  url: "http://actions:5055/webhook"
+  url: "http://spotybot-mobile-actions:5055/webhook"
 
-# Tracker store - Redis para persistencia de conversaciones
-tracker_store:
-  type: redis
-  url: "redis://redis:6379"
-  db: 0
-  password: null
-  record_exp: 30000  # Conversaciones expiran en 30000 segundos (~8 horas)
-  key_prefix: "botmobile:"
+# Tracker store - En memoria (sin persistencia)
+# Las conversaciones se almacenan en memoria y se pierden al reiniciar
+# tracker_store:
+#   type: InMemoryTrackerStore
 
-# Event broker - Redis para eventos y analytics
-event_broker:
-  type: redis
-  url: "redis://redis:6379" 
-  db: 1
-  password: null
-  queue: "rasa_production_events"
+# Event broker - Deshabilitado (sin analytics)
+# event_broker:
 
-# Lock store - Redis para sincronización entre instancias
-lock_store:
-  type: redis
-  url: "redis://redis:6379"
-  db: 2
-  password: null
+# Lock store - En memoria (sin sincronización externa)
+# lock_store:
 
 # Modelo de NLU (si usas servidor externo)
 # nlg:
