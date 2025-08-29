@@ -4,6 +4,7 @@ intents:
   - saludar
   - despedida
   - seleccionar_opcion
+  - elegir_opcion
   - regresar_menu
   - informar
   - informar_compania
@@ -147,6 +148,7 @@ actions:
   - action_elegir_opcion
   - action_default_fallback
   - action_procesar_compania
+  - action_finalizar_conversacion
 
 session_config:
   session_expiration_time: 60

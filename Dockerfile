@@ -1,8 +1,8 @@
 FROM python:3.10-slim
 
-LABEL maintainer="Spotybot Team"
-LABEL description="Spotybot - Asistente móvil para servicios de telecomunicaciones"
-LABEL version="1.11"
+LABEL maintainer="BotMobile Team"
+LABEL description="BotMobile - Asistente móvil para servicios de telecomunicaciones con IA"
+LABEL version="2.0.0"
 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -24,8 +24,6 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Descargar modelo de idioma para spaCy
-RUN python -m spacy download es_core_news_sm
 
 # Copiar archivos del proyecto
 COPY . .
@@ -39,8 +37,12 @@ RUN rasa train
 # Exponer puertos
 EXPOSE 5005 5055
 
-# Ejecutar el servidor de Rasa
-CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
+# Variables de entorno para producción
+ENV RASA_LOG_LEVEL=INFO
+ENV RASA_ENV=production
+
+# Ejecutar el servidor de Rasa con configuración de producción
+CMD ["rasa", "run", "--enable-api", "--cors", "*", "--endpoints", "endpoints_production.yml", "--log-level", "info"]
 
 # Healthcheck para saber si el servidor está listo
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \

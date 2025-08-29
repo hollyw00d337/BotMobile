@@ -19,6 +19,21 @@ nlu:
     - quiero [1](numero_opcion)
     - elijo [1](numero_opcion)
 
+- intent: elegir_opcion
+  examples: |
+    - [1](numero_opcion)
+    - [2](numero_opcion)
+    - [3](numero_opcion)
+    - uno
+    - dos
+    - tres
+    - primera opción
+    - segunda opción
+    - tercera opción
+    - 1
+    - 2
+    - 3
+
 - intent: saludar
   examples: |
     - hola
@@ -65,6 +80,8 @@ nlu:
     - COMPANIA_DETECTADA [Bait](compania_operador)
     - COMPANIA_DETECTADA [Flash Mobile](compania_operador)
     - COMPANIA_DETECTADA [Weex](compania_operador)
+    - COMPANIA_DETECTADA [Axtel](compania_operador)
+    - COMPANIA_DETECTADA [Altan](compania_operador)
     - COMPANIA_DETECTADA Telcel
     - COMPANIA_DETECTADA AT&T
     - COMPANIA_DETECTADA Movistar
@@ -73,6 +90,8 @@ nlu:
     - COMPANIA_DETECTADA Bait
     - COMPANIA_DETECTADA Flash Mobile
     - COMPANIA_DETECTADA Weex
+    - COMPANIA_DETECTADA Axtel
+    - COMPANIA_DETECTADA Altan
     - COMPANIA_DETECTADA [Telcel](compania_operador) NUMERO 6141234567
     - COMPANIA_DETECTADA [AT&T](compania_operador) NUMERO 5551234567
     - COMPANIA_DETECTADA [Movistar](compania_operador) NUMERO 5551234567
@@ -81,6 +100,32 @@ nlu:
     - COMPANIA_DETECTADA Telcel NUMERO 6141234567
     - COMPANIA_DETECTADA AT&T NUMERO 5551234567
     - COMPANIA_DETECTADA Movistar NUMERO 5551234567
+    - [Telcel](compania_operador)
+    - [AT&T](compania_operador)
+    - [Movistar](compania_operador)
+    - [Unefon](compania_operador)
+    - [Virgin Mobile](compania_operador)
+    - [Bait](compania_operador)
+    - [Flash Mobile](compania_operador)
+    - [Weex](compania_operador)
+    - [Axtel](compania_operador)
+    - [Altan Redes](compania_operador)
+    - [Quickly](compania_operador)
+    - [CFE](compania_operador)
+    - [Walmart](compania_operador)
+    - Telcel
+    - AT&T
+    - Movistar
+    - Unefon
+    - Virgin Mobile
+    - Bait
+    - Flash Mobile
+    - Weex
+    - Axtel
+    - Altan
+    - Quickly
+    - CFE
+    - Walmart
 
 - intent: informar
   examples: |

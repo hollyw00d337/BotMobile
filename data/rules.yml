@@ -7,11 +7,15 @@ rules:
     - intent: saludar
     - action: action_session_start
 
-- rule: Procesar compañía detectada por Node-RED después de session start
+- rule: Procesar compañía detectada por Node-RED
   steps:
-    - action: action_session_start
     - intent: informar_compania
     - action: action_procesar_compania
+
+- rule: Procesar respuesta de menú
+  steps:
+    - intent: elegir_opcion
+    - action: action_elegir_opcion
 
 - rule: Regresar al menú principal
   steps:
