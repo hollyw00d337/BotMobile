@@ -10,6 +10,8 @@ pipeline:
 - name: DIETClassifier
   epochs: 20
   constrain_similarities: true
+  entity_recognition: true
+  intent_classification: true
 - name: EntitySynonymMapper
 - name: RegexEntityExtractor
   use_lookup_tables: false

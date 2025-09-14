@@ -18,22 +18,21 @@ nlu:
     - selecciono [1](numero_opcion)
     - quiero [1](numero_opcion)
     - elijo [1](numero_opcion)
-
-- intent: elegir_opcion
-  examples: |
-    - [1](numero_opcion)
-    - [2](numero_opcion)
-    - [3](numero_opcion)
     - uno
     - dos
     - tres
     - primera opción
     - segunda opción
     - tercera opción
-    - 1
-    - 2
-    - 3
-
+    - primera
+    - segunda
+    - tercera
+    - opción uno
+    - opción dos
+    - opción tres
+    - la primera
+    - la segunda
+    - la tercera
 - intent: saludar
   examples: |
     - hola
@@ -216,4 +215,37 @@ nlu:
     - Telmex
     - at t
     - att
+
+- intent: iniciar_flujo
+  examples: |
+    - rsp0
+    - iniciar proceso
+    - comenzar flujo
+    - empezar
+    - continuar con el proceso
+    - quiero continuar
+    - sí quiero proceder
+    - acepto continuar
+
+- intent: finalizar_flujo
+  examples: |
+    - proceso terminado
+    - finalizar
+    - terminar proceso
+    - completado
+    - ya terminé
+    - fin del proceso
+    - listo
+    - he terminado
+
+- intent: respuesta_boton
+  examples: |
+    - Correcto
+    - Corregir
+    - Confirmar
+    - Cancelar
+    - Si
+    - No
+    - Aceptar
+    - Rechazar
     

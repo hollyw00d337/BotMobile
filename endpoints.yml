@@ -34,3 +34,16 @@ action_endpoint:
 #  username: username
 #  password: password
 #  queue: queue
+
+# **INTEGRACIÓN NODE-RED**: Configuración específica para botones
+# Socket.io endpoint para comunicación en tiempo real con Node-RED
+socketio:
+  user_message_evt: user_uttered
+  bot_message_evt: bot_uttered
+  session_persistence: true
+
+# Webhook REST con formato personalizado para Node-RED
+rest:
+  webhook:
+    url: "http://localhost:5005/webhooks/rest/webhook"
+    output_channel: "botmobile_node_red"

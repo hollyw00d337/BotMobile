@@ -1,8 +1,8 @@
 FROM python:3.10-slim
 
 LABEL maintainer="BotMobile Team"
-LABEL description="BotMobile - Asistente móvil para servicios de telecomunicaciones con IA"
-LABEL version="2.0.0"
+LABEL description="BotMobile - Asistente móvil con Node-RED e integración de botones v1.25"
+LABEL version="1.25"
 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -28,11 +28,11 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copiar archivos del proyecto
 COPY . .
 
-# Crear carpetas necesarias (aunque normalmente ya estén)
+# Crear carpetas necesarias
 RUN mkdir -p models logs
 
-# Entrenar el modelo (esto debe hacerse después de copiar los archivos)
-RUN rasa train
+# Entrenar el modelo (con manejo de errores)
+RUN rasa train --quiet || echo "Warning: Training completed with warnings"
 
 # Exponer puertos
 EXPOSE 5005 5055

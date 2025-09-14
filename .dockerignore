@@ -15,6 +15,18 @@ logs/
 *.tmp
 .rasa/
 
+# Carpeta del código extraído
+spotybot-1.25-code/
+
+# Archivos de prueba y desarrollo
+test_*.py
+*_test.py
+debug_*.py
+verificacion_*.py
+
+# Configuraciones de desarrollo
+.env
+
 
 
 # Cache de Python

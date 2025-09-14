@@ -8,9 +8,8 @@ networks:
         - subnet: 172.20.0.0/16
 
 services:
-  # Servidor principal de Rasa
   rasa:
-    image: hollyw00d337/botmobilev1.1:latest
+    image: spotybot:1.28
     container_name: botmobile-rasa
     command: >
       rasa run
@@ -40,9 +39,8 @@ services:
     ports:
       - "5005:5005"
 
-  # Servidor de acciones customizadas
   actions:
-    image: hollyw00d337/botmobilev1.1:latest
+    image: spotybot:1.28
     container_name: botmobile-actions
     command: rasa run actions --port 5055
     restart: unless-stopped

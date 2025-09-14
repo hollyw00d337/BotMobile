@@ -4,10 +4,12 @@ intents:
   - saludar
   - despedida
   - seleccionar_opcion
-  - elegir_opcion
   - regresar_menu
   - informar
   - informar_compania
+  - iniciar_flujo
+  - finalizar_flujo
+  - respuesta_boton
 
 entities:
   - numero_opcion
@@ -49,7 +51,21 @@ slots:
     mappings:
       - type: custom
 
+  numero_cliente:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
   numero_telefono:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  telefono_usuario:
     type: text
     initial_value: null
     influence_conversation: false
@@ -60,6 +76,63 @@ slots:
     type: text
     initial_value: null
     influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: compania_operador
+
+  plan_seleccionado:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  operador_detectado:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  numero_validado:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  session_started:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  estado_confirmacion:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  inicio_conversacion:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  node_red_active:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  conversation_completed:
+    type: bool
+    initial_value: false
+    influence_conversation: false
     mappings:
       - type: custom
 
@@ -146,9 +219,13 @@ responses:
 actions:
   - action_session_start
   - action_elegir_opcion
-  - action_default_fallback
   - action_procesar_compania
-  - action_finalizar_conversacion
+  - action_default_fallback
+  - action_inicio_node_red
+  - action_fin_node_red
+  - action_manejar_inicio_flujo
+  - action_manejar_fin_flujo
+  - action_respuesta_botones
 
 session_config:
   session_expiration_time: 60

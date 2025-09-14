@@ -3,7 +3,12 @@
 
 # Action endpoint para acciones customizadas
 action_endpoint:
-  url: "http://spotybot-mobile-actions:5055/webhook"
+  url: "http://botmobile-actions:5055/webhook"
+
+# Node-RED Integration endpoint
+# Endpoint para recibir webhooks desde Node-RED
+rest:
+  # El webhook de Node-RED enviará requests a: /webhooks/rest/webhook
 
 # Tracker store - En memoria (sin persistencia)
 # Las conversaciones se almacenan en memoria y se pierden al reiniciar

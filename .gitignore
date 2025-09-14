@@ -1,7 +1,9 @@
 # Archivos de sistema
 .DS_Store
+.vscode/
 
 # Caché de Rasa
+.rasa/
 .rasa/cache/
 
 # Archivos compilados de Python
@@ -18,6 +20,26 @@ test_*.json
 test_*.ps1
 test_*.py
 test_*.bat
+debug_*.py
+verificacion_*.py
+train_*.py
+train_*.bat
+fix_*.py
+
+# Configuraciones de desarrollo y prueba
+config_minimal.yml
+config_simple.yml
+config_windows.yml
+endpoints_docker.yml
+endpoints_local_production.yml
+endpoints_node_red.yml
+
+# Archivos de documentación temporal
+ENTRENAMIENTO_EXITOSO.md
+SOLUCION_SLOTS.md
+
+# Archivos de configuración local
+.env
 
 # Outputs temporales
 pdf_outputs/*.pdf
