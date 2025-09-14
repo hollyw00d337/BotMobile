@@ -105,8 +105,9 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad).
 2️⃣ Ver paquetes disponibles.
 3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuraciones de la cuenta
 
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción."""
+☕ ¡Vamos a hacerlo simple! Selecciona la opción que necesitas."""
         
         # **CORRECCIÓN NODE-RED**: Enviar un solo mensaje con texto + botones
         dispatcher.utter_message(
@@ -114,7 +115,8 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
             buttons=[
                 {"title": "1️⃣ Conservar mi número (portabilidad).", "payload": "1"},
                 {"title": "2️⃣ Ver paquetes disponibles.", "payload": "2"},
-                {"title": "3️⃣ Hablar con alguien del equipo.", "payload": "3"}
+                {"title": "3️⃣ Hablar con alguien del equipo.", "payload": "3"},
+                {"title": "9️⃣ Configuración de la cuenta.", "payload": "9"}
             ]
         )
         
@@ -272,6 +274,7 @@ Con BotMobile puedes cambiar tu chip Telcel por uno nuestro y mantener tu mismo 
 1️⃣ Conservar mi número Telcel (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
 💡 La portabilidad desde Telcel es súper fácil y rápida.
             """,
@@ -291,6 +294,7 @@ Con BotMobile puedes traer tu número de Movistar y disfrutar de mejores benefic
 1️⃣ Conservar mi número Movistar (portabilidad)
 2️⃣ Ver paquetes disponibles  
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
 💡 El cambio desde Movistar es simple y sin complicaciones.
             """,
@@ -310,6 +314,7 @@ Con BotMobile puedes migrar desde AT&T manteniendo tu número y obteniendo:
 1️⃣ Conservar mi número AT&T (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
 💡 Cambiar desde AT&T es rápido y mantienes tu número.
             """,
@@ -329,6 +334,7 @@ Con BotMobile puedes traer tu número de Unefon y conseguir:
 1️⃣ Conservar mi número Unefon (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
 💡 La migración desde Unefon es sencilla y rápida.
             """,
@@ -348,6 +354,7 @@ Con BotMobile puedes evolucionar desde Virgin Mobile obteniendo:
 1️⃣ Conservar mi número Virgin (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
 💡 El cambio desde Virgin Mobile es directo y simple.
             """,
@@ -367,6 +374,7 @@ Con BotMobile puedes migrar desde Altan manteniendo tu número y accediendo a:
 1️⃣ Conservar mi número Altan (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
 💡 La portabilidad desde Altan es directa y eficiente.
             """
@@ -388,6 +396,7 @@ Puedes conservar tu número actual y disfrutar de nuestros beneficios:
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
 💡 El cambio a BotMobile es fácil y rápido.
         """)
@@ -405,7 +414,8 @@ Puedes conservar tu número actual y disfrutar de nuestros beneficios:
             buttons=[
                 {"title": "1️⃣ Conservar mi número (portabilidad).", "payload": "1"},
                 {"title": "2️⃣ Ver paquetes disponibles.", "payload": "2"},
-                {"title": "3️⃣ Hablar con alguien del equipo.", "payload": "3"}
+                {"title": "3️⃣ Hablar con alguien del equipo.", "payload": "3"},
+                {"title": "9️⃣ Configuraciones de la cuenta.", "payload": "9"}
             ]
         )
         
@@ -470,8 +480,8 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
-
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción.
+9️⃣ Configuración de la cuenta
+☕ ¡Vamos a hacerlo simple! Solo responde seleccionando la opción que necesites.
             """
             dispatcher.utter_message(text=mensaje_menu)
             return [SlotSet("estado_menu", "menu_principal")]
@@ -520,8 +530,9 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción.
+☕ ¡Vamos a hacerlo simple! Solo responde seleccionando la opción que necesites.
             """
             dispatcher.utter_message(text=mensaje_menu)
             return [SlotSet("estado_menu", "menu_principal")]
@@ -637,8 +648,8 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
-
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción.""",
+9️⃣ Configuración de la cuenta
+""",
 
             'AT&T': """🎯 ¡Hola! Veo que eres cliente de AT&T. Te explico cómo cambiarte a BotMobile paso a paso.
 
@@ -651,8 +662,8 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
-
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción.""",
+9️⃣ Configuración de la cuenta
+""",
 
             'Movistar': """🎯 ¡Perfecto! Eres de Movistar. Conozco muy bien el proceso para cambiarte a BotMobile.
 
@@ -665,8 +676,8 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
-
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción.""",
+9️⃣ Configuración de la cuenta
+""",
 
             'Unefon': """🎯 ¡Hola! Vienes de Unefon. Te ayudo a mejorar tu plan con BotMobile.
 
@@ -679,6 +690,7 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
 
 ☕ ¡Solo $20 pesos más por 12x más datos! Solo responde con el número de la opción.""",
 
@@ -693,8 +705,11 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
+9️⃣ Configuración de la cuenta
+""",
 
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción."""
+            'Bait': """🎯 ¡Perfecto! Vienes de Bait. Te ayudo con tu portabilidad a BotMobile.
+"""
         }
         
         # Si la compañía no está en el diccionario, usar mensaje genérico
@@ -710,8 +725,8 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
-
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción."""
+9️⃣ Configuración de la cuenta
+"""
         
         return mensajes_por_compania.get(compania, mensaje_generico)
 
@@ -812,8 +827,8 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad)
 2️⃣ Ver paquetes disponibles
 3️⃣ Hablar con alguien del equipo
-
-☕ ¡Vamos a hacerlo simple! Solo responde con el número de la opción."""
+9️⃣ Configuración de la cuenta
+"""
         
         # **CORRECCIÓN NODE-RED**: Enviar un solo mensaje con texto + botones
         dispatcher.utter_message(
@@ -821,7 +836,8 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
             buttons=[
                 {"title": "1️⃣ Conservar mi número (portabilidad).", "payload": "1"},
                 {"title": "2️⃣ Ver paquetes disponibles.", "payload": "2"},
-                {"title": "3️⃣ Hablar con alguien del equipo.", "payload": "3"}
+                {"title": "3️⃣ Hablar con alguien del equipo.", "payload": "3"},
+                {"title": "9️⃣ Configuración de la cuenta.", "payload": "9"}
             ]
         )
         return [SlotSet("estado_menu", "menu_principal")]
@@ -883,7 +899,6 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 3️⃣ Hablar con el equipo para más info
 0️⃣ Volver al menú principal
 
-Escribe el número de la opción que necesitas 👆
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_paquetes")]
@@ -932,8 +947,6 @@ Escribe el número de la opción que necesitas 👆
 2️⃣ Documentos necesarios
 3️⃣ Hablar con equipo
 0️⃣ Menú principal
-
-¿Qué opción necesitas?
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_portabilidad")]
@@ -1387,9 +1400,12 @@ O escribe "0" para volver al menú principal.
 � Nuestro equipo se pondrá en contacto para completar tu portabilidad.
 Si prefieres, puedes escribirnos ahora por WhatsApp: +52 614 558 7289
 
-0️⃣ Escribe 0 para volver al menú principal
+0️⃣ Menú principal
             """
             dispatcher.utter_message(text=mensaje_final)
+            
+            # Nuevo mensaje adicional
+            dispatcher.utter_message(text="msj3")
             
             # NO mostrar menú principal automáticamente - solo si el usuario escribe 0
             
@@ -1425,12 +1441,7 @@ class ActionDefaultFallback(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         mensaje = """🤔 No entendí tu mensaje. 
-
-Por favor escribe:
-• Un número (1, 2, 3, etc.) para navegar
-• "0" para volver al menú principal
-• "hola" para reiniciar
-
+Por favor selecciona una opción del menú
 ¿En qué puedo ayudarte?"""
         
         dispatcher.utter_message(text=mensaje)
@@ -1495,7 +1506,6 @@ class ActionFinNodeRed(Action):
 
 ¡Gracias por elegir BotMobile! 🚀"""
         
-        # Formato especial para Node-RED con todos los datos
         response_data = {
             "text": mensaje_final,
             "metadata": {
