@@ -18,13 +18,20 @@ models/*.tar.gz
 temp_*.json
 test_*.json
 test_*.ps1
-test_*.py
 test_*.bat
 debug_*.py
 verificacion_*.py
 train_*.py
 train_*.bat
 fix_*.py
+
+# Archivos de test específicos (mantener solo el principal)
+test_deteccion_*.py
+test_flujo_*.py
+test_integration*.py
+test_mensajes_*.py
+test_slots_*.py
+# EXCEPCIÓN: test_funcionamiento_completo.py se mantiene
 
 # Configuraciones de desarrollo y prueba
 config_minimal.yml
