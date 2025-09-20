@@ -13,26 +13,62 @@ nlu:
     - [3](numero_opcion)
     - [4](numero_opcion)
     - [5](numero_opcion)
+    - [6](numero_opcion)
+    - [7](numero_opcion)
+    - [8](numero_opcion)
+    - [9](numero_opcion)
     - opción [1](numero_opcion)
     - opción [2](numero_opcion)
     - selecciono [1](numero_opcion)
     - quiero [1](numero_opcion)
     - elijo [1](numero_opcion)
+    - me interesa [2](numero_opcion)
+    - escojo [3](numero_opcion)
+    - prefiero [1](numero_opcion)
+    - dame [2](numero_opcion)
+    - elige [1](numero_opcion)
     - uno
     - dos
     - tres
+    - cuatro
+    - cinco
+    - seis
+    - siete
+    - ocho
+    - nueve
     - primera opción
     - segunda opción
     - tercera opción
+    - cuarta opción
+    - quinta opción
     - primera
     - segunda
     - tercera
+    - cuarta
+    - quinta
     - opción uno
     - opción dos
     - opción tres
+    - opción cuatro
+    - opción cinco
     - la primera
     - la segunda
     - la tercera
+    - la cuarta
+    - la quinta
+    - el primero
+    - el segundo
+    - el tercero
+    - número [1](numero_opcion)
+    - botón [2](numero_opcion)
+    - click [1](numero_opcion)
+    - presiono [2](numero_opcion)
+    - toco [1](numero_opcion)
+    - 1️⃣
+    - 2️⃣
+    - 3️⃣
+    - 4️⃣
+    - 5️⃣
 - intent: saludar
   examples: |
     - hola
@@ -68,6 +104,109 @@ nlu:
     - regresar
     - atrás
     - principal
+    - al inicio
+    - cancelar
+    - salir
+    - home
+    - inicio
+    - regresa
+    - vuelta atrás
+    - menú de inicio
+    - empezar de nuevo
+    - reiniciar
+    - comenzar otra vez
+
+- intent: confirmar
+  examples: |
+    - sí
+    - si
+    - yes
+    - correcto
+    - exacto
+    - afirmativo
+    - ok
+    - okay
+    - claro
+    - perfecto
+    - dale
+    - va
+    - está bien
+    - de acuerdo
+    - confirmo
+    - acepto
+    - así es
+    - por supuesto
+    - efectivamente
+
+- intent: negar
+  examples: |
+    - no
+    - nope
+    - negativo
+    - incorrecto
+    - no es correcto
+    - no gracias
+    - no quiero
+    - no me interesa
+    - mejor no
+    - paso
+    - no aplica
+    - no es así
+    - diferente
+    - otro
+    - cambiar
+
+- intent: portabilidad_interes
+  examples: |
+    - quiero portabilidad
+    - conservar mi número
+    - mantener mi número
+    - no perder mi número
+    - trasladar mi número
+    - migrar mi número
+    - portabilidad
+    - porting
+    - cambio de operador
+    - cambiar de compañía
+    - me quiero cambiar
+    - cambiar operador
+    - conservar línea
+    - mantener línea
+
+- intent: planes_interes
+  examples: |
+    - planes
+    - paquetes
+    - ofertas
+    - promociones
+    - qué planes tienen
+    - cuánto cuesta
+    - precios
+    - tarifas
+    - costos
+    - planes disponibles
+    - qué ofrecen
+    - paquetes de datos
+    - ver planes
+    - mostrar planes
+    - opciones disponibles
+
+- intent: contacto_interes
+  examples: |
+    - hablar con alguien
+    - contactar
+    - atención al cliente
+    - servicio al cliente
+    - representante
+    - agente
+    - persona real
+    - humano
+    - asesor
+    - soporte
+    - ayuda personal
+    - whatsapp
+    - teléfono
+    - llamar
 
 - intent: informar_compania
   examples: |
@@ -196,6 +335,34 @@ nlu:
     - Albertano Lopez Medina
     - Me llamo Albertano
     - Mi nombre es Albertano
+    - aquí está mi número
+    - este es mi teléfono
+    - te paso mi número
+    - mi celular es
+    - el número es
+    - número de teléfono
+    - celular
+    - teléfono
+    - línea
+    - chip
+    - sim
+    - mi información
+    - datos personales
+    - mis datos
+    - información del usuario
+    - datos del cliente
+    - 614-123-4567
+    - (614) 123-4567
+    - +52 614 123 4567
+    - 52 614 123 4567
+    - en efecto
+    - así es
+    - correcto
+    - eso es
+    - exactamente
+    - preciso
+    - acertado
+    - tal cual
 
 # Lookup table para compania_operador
 - lookup: compania_operador
@@ -215,37 +382,41 @@ nlu:
     - Telmex
     - at t
     - att
+    - Spot Uno
+    - Altan Redes
+    - Quickly
 
-- intent: iniciar_flujo
+# Lookup table para palabras relacionadas con planes
+- lookup: plan_keywords
   examples: |
-    - rsp0
-    - iniciar proceso
-    - comenzar flujo
-    - empezar
-    - continuar con el proceso
-    - quiero continuar
-    - sí quiero proceder
-    - acepto continuar
+    - plan
+    - planes
+    - paquete
+    - paquetes
+    - oferta
+    - ofertas
+    - promoción
+    - promociones
+    - tarifa
+    - tarifas
+    - precio
+    - precios
+    - costo
+    - costos
 
-- intent: finalizar_flujo
+# Lookup table para palabras relacionadas con portabilidad
+- lookup: portabilidad_keywords
   examples: |
-    - proceso terminado
-    - finalizar
-    - terminar proceso
-    - completado
-    - ya terminé
-    - fin del proceso
-    - listo
-    - he terminado
-
-- intent: respuesta_boton
-  examples: |
-    - Correcto
-    - Corregir
-    - Confirmar
-    - Cancelar
-    - Si
-    - No
-    - Aceptar
-    - Rechazar
+    - portabilidad
+    - porting
+    - conservar
+    - mantener
+    - trasladar
+    - migrar
+    - cambiar
+    - cambio
+    - operador
+    - compañía
+    - número
+    - línea
     

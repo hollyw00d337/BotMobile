@@ -52,27 +52,63 @@ stories:
     - intent: seleccionar_opcion
     - action: action_elegir_opcion
 
-# Nuevas stories para flujo Node-RED
-- story: Inicio de flujo desde Node-RED
+# Historias para intents específicos
+- story: Usuario quiere portabilidad directamente
   steps:
-    - intent: iniciar_flujo
-    - action: action_manejar_inicio_flujo
+    - intent: portabilidad_interes
+    - action: action_elegir_opcion
+    - slot_was_set:
+        - estado_menu: "portabilidad"
 
-- story: Fin de flujo desde Node-RED
+- story: Usuario pregunta por planes directamente
   steps:
-    - intent: finalizar_flujo
-    - action: action_manejar_fin_flujo
+    - intent: planes_interes
+    - action: action_elegir_opcion
+    - slot_was_set:
+        - estado_menu: "paquetes"
 
-- story: Respuesta a botones
+- story: Usuario quiere contacto directo
   steps:
-    - intent: respuesta_boton
-    - action: action_respuesta_botones
+    - intent: contacto_interes
+    - action: action_elegir_opcion
+    - slot_was_set:
+        - estado_menu: "contacto"
 
-- story: Flujo completo Node-RED
+# Manejo de confirmaciones y negaciones
+- story: Usuario confirma información
   steps:
-    - intent: iniciar_flujo
-    - action: action_manejar_inicio_flujo
-    - intent: respuesta_boton
-    - action: action_respuesta_botones
-    - intent: finalizar_flujo
-    - action: action_manejar_fin_flujo
+    - intent: confirmar
+    - action: action_elegir_opcion
+
+- story: Usuario niega o rechaza
+  steps:
+    - intent: negar
+    - action: action_elegir_opcion
+
+# Regreso al menú desde cualquier estado
+- story: Regreso al menú desde portabilidad
+  steps:
+    - slot_was_set:
+        - estado_menu: "portabilidad"
+    - intent: regresar_menu
+    - action: action_elegir_opcion
+    - slot_was_set:
+        - estado_menu: "menu_principal"
+
+- story: Regreso al menú desde paquetes
+  steps:
+    - slot_was_set:
+        - estado_menu: "paquetes"
+    - intent: regresar_menu
+    - action: action_elegir_opcion
+    - slot_was_set:
+        - estado_menu: "menu_principal"
+
+- story: Regreso al menú desde contacto
+  steps:
+    - slot_was_set:
+        - estado_menu: "contacto"
+    - intent: regresar_menu
+    - action: action_elegir_opcion
+    - slot_was_set:
+        - estado_menu: "menu_principal"

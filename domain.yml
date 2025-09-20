@@ -10,6 +10,11 @@ intents:
   - iniciar_flujo
   - finalizar_flujo
   - respuesta_boton
+  - confirmar
+  - negar
+  - portabilidad_interes
+  - planes_interes
+  - contacto_interes
 
 entities:
   - numero_opcion

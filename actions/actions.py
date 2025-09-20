@@ -105,7 +105,7 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 1️⃣ Conservar mi número (portabilidad).
 2️⃣ Ver paquetes disponibles.
 3️⃣ Hablar con alguien del equipo.
-9️⃣ Configuraciones de la cuenta
+9️⃣ Configuraciones de la cuenta.
 
 ☕ ¡Vamos a hacerlo simple! Selecciona la opción que necesitas."""
         
@@ -271,10 +271,10 @@ Con BotMobile puedes cambiar tu chip Telcel por uno nuestro y mantener tu mismo 
 
 👇 ¿Qué quieres hacer?
 
-1️⃣ Conservar mi número Telcel (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número Telcel (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 💡 La portabilidad desde Telcel es súper fácil y rápida.
             """,
@@ -291,10 +291,10 @@ Con BotMobile puedes traer tu número de Movistar y disfrutar de mejores benefic
 
 👇 ¿Qué necesitas?
 
-1️⃣ Conservar mi número Movistar (portabilidad)
-2️⃣ Ver paquetes disponibles  
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número Movistar (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 💡 El cambio desde Movistar es simple y sin complicaciones.
             """,
@@ -311,10 +311,10 @@ Con BotMobile puedes migrar desde AT&T manteniendo tu número y obteniendo:
 
 👇 ¿Qué te interesa?
 
-1️⃣ Conservar mi número AT&T (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número AT&T (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 💡 Cambiar desde AT&T es rápido y mantienes tu número.
             """,
@@ -331,10 +331,10 @@ Con BotMobile puedes traer tu número de Unefon y conseguir:
 
 👇 ¿Qué buscas?
 
-1️⃣ Conservar mi número Unefon (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número Unefon (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 💡 La migración desde Unefon es sencilla y rápida.
             """,
@@ -351,10 +351,10 @@ Con BotMobile puedes evolucionar desde Virgin Mobile obteniendo:
 
 👇 ¿Qué prefieres?
 
-1️⃣ Conservar mi número Virgin (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número Virgin (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 💡 El cambio desde Virgin Mobile es directo y simple.
             """,
@@ -371,10 +371,10 @@ Con BotMobile puedes migrar desde Altan manteniendo tu número y accediendo a:
 
 👇 ¿Qué necesitas?
 
-1️⃣ Conservar mi número Altan (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número Altan (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 💡 La portabilidad desde Altan es directa y eficiente.
             """
@@ -393,10 +393,10 @@ Puedes conservar tu número actual y disfrutar de nuestros beneficios:
 
 👇 ¿Qué te interesa?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 💡 El cambio a BotMobile es fácil y rápido.
         """)
@@ -477,10 +477,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 ☕ ¡Vamos a hacerlo simple! Solo responde seleccionando la opción que necesites.
             """
             dispatcher.utter_message(text=mensaje_menu)
@@ -527,10 +527,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 ☕ ¡Vamos a hacerlo simple! Solo responde seleccionando la opción que necesites.
             """
@@ -645,10 +645,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 """,
 
             'AT&T': """🎯 ¡Hola! Veo que eres cliente de AT&T. Te explico cómo cambiarte a BotMobile paso a paso.
@@ -659,10 +659,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 """,
 
             'Movistar': """🎯 ¡Perfecto! Eres de Movistar. Conozco muy bien el proceso para cambiarte a BotMobile.
@@ -673,10 +673,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 """,
 
             'Unefon': """🎯 ¡Hola! Vienes de Unefon. Te ayudo a mejorar tu plan con BotMobile.
@@ -687,10 +687,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 
 ☕ ¡Solo $20 pesos más por 12x más datos! Solo responde con el número de la opción.""",
 
@@ -702,10 +702,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 """,
 
             'Bait': """🎯 ¡Perfecto! Vienes de Bait. Te ayudo con tu portabilidad a BotMobile.
@@ -722,10 +722,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 """
         
         return mensajes_por_compania.get(compania, mensaje_generico)
@@ -769,8 +769,27 @@ class ActionElegirOpcion(Action):
         estado_actual = tracker.get_slot("estado_menu")
         numero_opcion = next(tracker.get_latest_entity_values("numero_opcion"), None)
         intent = tracker.latest_message.get('intent', {}).get('name')
+        texto_usuario = tracker.latest_message.get('text', '').lower()
         
         print(f"DEBUG: estado_actual={estado_actual}, numero_opcion={numero_opcion}, intent={intent}")
+        print(f"DEBUG: texto_usuario='{texto_usuario}'")
+        
+        # 🧠 MEJORA: Mapeo inteligente de intents a opciones
+        if not numero_opcion and estado_actual == "menu_principal":
+            if intent == "portabilidad_interes" or any(palabra in texto_usuario for palabra in ["portabilidad", "conservar número", "mantener número"]):
+                numero_opcion = "1"
+                print(f"DEBUG: Intent/texto mapeado a opción 1 (portabilidad)")
+            elif intent == "planes_interes" or any(palabra in texto_usuario for palabra in ["planes", "paquetes", "ofertas"]):
+                numero_opcion = "2"
+                print(f"DEBUG: Intent/texto mapeado a opción 2 (planes)")
+            elif intent == "contacto_interes" or any(palabra in texto_usuario for palabra in ["contacto", "hablar", "whatsapp"]):
+                numero_opcion = "3"
+                print(f"DEBUG: Intent/texto mapeado a opción 3 (contacto)")
+        
+        # 🔄 MEJORA: Detección de regreso al menú desde cualquier estado
+        if intent == "regresar_menu" or any(palabra in texto_usuario for palabra in ["menú", "menu", "volver", "regresar", "inicio"]):
+            print(f"DEBUG: Regresando al menú principal")
+            return self._mostrar_menu_principal(dispatcher)
         
         estados_texto_libre = ["capturar_nip", "validar_imei", "capturar_nombre"]
         
@@ -824,10 +843,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué necesitas hoy?
 
-1️⃣ Conservar mi número (portabilidad)
-2️⃣ Ver paquetes disponibles
-3️⃣ Hablar con alguien del equipo
-9️⃣ Configuración de la cuenta
+1️⃣ Conservar mi número (portabilidad).
+2️⃣ Ver paquetes disponibles.
+3️⃣ Hablar con alguien del equipo.
+9️⃣ Configuración de la cuenta.
 """
         
         # **CORRECCIÓN NODE-RED**: Enviar un solo mensaje con texto + botones
@@ -847,18 +866,11 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
             # Enviar la imagen de portabilidad primero
             dispatcher.utter_message(image=ImageConfig.PORTABILIDAD_3_PASOS)
             
-            mensaje = """🔄 PORTABILIDAD 
-
-1️⃣ ¿Cómo conseguir NIP?
-2️⃣ Documentos necesarios
-3️⃣ Hablar con equipo
-0️⃣ Menú principal
-
-¿Qué opción necesitas?"""
-            
-            # **CORRECCIÓN NODE-RED**: Enviar un solo mensaje con texto + botones
+            # **CORRECCIÓN NODE-RED**: Múltiples mensajes para elementos separados en array JSON
+            dispatcher.utter_message(text="🔄 PORTABILIDAD")
+            dispatcher.utter_message(text="1️⃣ ¿Cómo conseguir NIP?.\n2️⃣ Documentos necesarios.\n3️⃣ Hablar con equipo.\n0️⃣ Menú principal.")
             dispatcher.utter_message(
-                text=mensaje,
+                text="¿Qué opción necesitas?",
                 buttons=[
                     {"title": "1️⃣ ¿Cómo conseguir NIP?.", "payload": "1"},
                     {"title": "2️⃣ Documentos necesarios.", "payload": "2"},
@@ -894,10 +906,10 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 
 👇 ¿Qué quieres hacer?
 
-1️⃣ Conservar mi número con estos paquetes (Portabilidad)
-2️⃣ Activar línea nueva con estos paquetes
-3️⃣ Hablar con el equipo para más info
-0️⃣ Volver al menú principal
+1️⃣ Conservar mi número con estos paquetes (Portabilidad).
+2️⃣ Activar línea nueva con estos paquetes.
+3️⃣ Hablar con el equipo para más info.
+0️⃣ Volver al menú principal.
 
             """
             dispatcher.utter_message(text=mensaje)
@@ -919,7 +931,7 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
 • Lunes a Viernes: 9:00 - 18:00
 • Sábados: 9:00 - 14:00
 
-0️⃣ Volver al menú principal
+0️⃣ Volver al menú principal.
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_soporte")]
@@ -938,75 +950,37 @@ Elige entre chip físico o eSIM, ¡y hazlo todo desde aquí!
             # Enviar la imagen de portabilidad primero
             dispatcher.utter_message(image=ImageConfig.PORTABILIDAD_3_PASOS)
             
-            mensaje = """
-🔄 PORTABILIDAD 
-
-¡Perfecto! Vamos a conservar tu número actual y activar uno de nuestros paquetes.
-
-1️⃣ ¿Cómo conseguir NIP?
-2️⃣ Documentos necesarios
-3️⃣ Hablar con equipo
-0️⃣ Menú principal
-            """
-            dispatcher.utter_message(text=mensaje)
+            # **CORRECCIÓN NODE-RED**: Múltiples mensajes separados
+            dispatcher.utter_message(text="🔄 PORTABILIDAD")
+            dispatcher.utter_message(text="¡Perfecto! Vamos a conservar tu número actual y activar uno de nuestros paquetes.")
+            dispatcher.utter_message(text="1️⃣ ¿Cómo conseguir NIP?.\n2️⃣ Documentos necesarios.\n3️⃣ Hablar con equipo.\n0️⃣ Menú principal.")
             return [SlotSet("estado_menu", "submenu_portabilidad")]
         
         elif numero_opcion == "2":
             # Línea nueva (próximamente)
-            mensaje = """
-📞 LÍNEA NUEVA 
-
-Esta opción estará disponible muy pronto.
-
-Por ahora puedes:
-📲 WhatsApp: +52 614 558 7289
-
-🕒 Horarios de atención:
-• Lunes a Viernes: 9:00 - 18:00
-• Sábados: 9:00 - 14:00
-
-👇 ¿Qué quieres hacer?
-
-1️⃣ Ver paquetes de nuevo
-2️⃣ Ir a portabilidad
-0️⃣ Menú principal
-            """
-            dispatcher.utter_message(text=mensaje)
+            # **CORRECCIÓN NODE-RED**: Múltiples mensajes separados
+            dispatcher.utter_message(text="📞 LÍNEA NUEVA")
+            dispatcher.utter_message(text="Esta opción estará disponible muy pronto.")
+            dispatcher.utter_message(text="Por ahora puedes:\n📲 WhatsApp: +52 614 558 7289")
+            dispatcher.utter_message(text="🕒 Horarios de atención:\n• Lunes a Viernes: 9:00 - 18:00\n• Sábados: 9:00 - 14:00")
+            dispatcher.utter_message(text="👇 ¿Qué quieres hacer?\n\n1️⃣ Ver paquetes de nuevo.\n2️⃣ Ir a portabilidad.\n0️⃣ Menú principal.")
             return [SlotSet("estado_menu", "submenu_paquetes")]
         
         elif numero_opcion == "3":
             # Hablar con el equipo
-            mensaje = """
-👥 Contacta a nuestro equipo
-
-📲 WhatsApp: +52 614 558 7289
-
-⚡ Nuestro equipo te ayudará con:
-• Detalles de cada paquete
-• Disponibilidad en tu zona
-• Proceso de activación
-• Resolver cualquier duda
-
-🕒 Horarios de atención:
-• Lunes a Viernes: 9:00 - 18:00
-• Sábados: 9:00 - 14:00
-
-0️⃣ Volver al menú principal
-            """
-            dispatcher.utter_message(text=mensaje)
+            # **CORRECCIÓN NODE-RED**: Múltiples mensajes separados
+            dispatcher.utter_message(text="👥 Contacta a nuestro equipo")
+            dispatcher.utter_message(text="📲 WhatsApp: +52 614 558 7289")
+            dispatcher.utter_message(text="⚡ Nuestro equipo te ayudará con:\n• Detalles de cada paquete\n• Disponibilidad en tu zona\n• Proceso de activación\n• Resolver cualquier duda")
+            dispatcher.utter_message(text="🕒 Horarios de atención:\n• Lunes a Viernes: 9:00 - 18:00\n• Sábados: 9:00 - 14:00")
+            dispatcher.utter_message(text="0️⃣ Volver al menú principal.")
             return [SlotSet("estado_menu", "submenu_paquetes")]
         
         else:
             # Opción no válida
-            mensaje = """
-Opción no válida. Por favor elige:
-
-1️⃣ Conservar mi número con estos paquetes (Portabilidad)
-2️⃣ Activar línea nueva con estos paquetes
-3️⃣ Hablar con el equipo para más info
-0️⃣ Volver al menú principal
-            """
-            dispatcher.utter_message(text=mensaje)
+            # **CORRECCIÓN NODE-RED**: Múltiples mensajes separados
+            dispatcher.utter_message(text="Opción no válida. Por favor elige:")
+            dispatcher.utter_message(text="1️⃣ Conservar mi número con estos paquetes (Portabilidad).\n2️⃣ Activar línea nueva con estos paquetes.\n3️⃣ Hablar con el equipo para más info.\n0️⃣ Volver al menú principal.")
             return [SlotSet("estado_menu", "submenu_paquetes")]
     
     def _manejar_submenu_portabilidad(self, dispatcher, numero_opcion):
@@ -1032,61 +1006,35 @@ Solo hay 2 formas:
             mensaje_menu_nip = """
 👇 ¿Ya lo pediste o quieres ayuda?
 
-1️⃣ Ya tengo mi NIP, quiero avanzar 🚀
-2️⃣ ¿Dónde lo escribo?
-3️⃣ Quiero hablar con alguien del equipo
+1️⃣ Ya tengo mi NIP, quiero avanzar.
+2️⃣ ¿Dónde lo escribo?.
+3️⃣ Quiero hablar con alguien del equipo.
             """
             dispatcher.utter_message(text=mensaje_menu_nip)
             return [SlotSet("estado_menu", "submenu_nip")]
         
         elif numero_opcion == "2":
-            mensaje = """
-📄 Documentos necesarios
-
-Para la portabilidad necesitas:
-
-✅ Identificación oficial vigente
-✅ Código IMEI (para eSIM)
-✅ NIP de tu compañía actual
-✅ Número telefónico a portar
-
-Escribe **0** para volver al menú principal.
-            """
-            dispatcher.utter_message(text=mensaje)
+            # **CORRECCIÓN NODE-RED**: Múltiples mensajes separados
+            dispatcher.utter_message(text="📄 Documentos necesarios")
+            dispatcher.utter_message(text="Para la portabilidad necesitas:")
+            dispatcher.utter_message(text="✅ Identificación oficial vigente\n✅ Código IMEI (para eSIM)\n✅ NIP de tu compañía actual\n✅ Número telefónico a portar")
+            dispatcher.utter_message(text="Escribe **0** para volver al menú principal.")
             return [SlotSet("estado_menu", "submenu_portabilidad")]
         
         elif numero_opcion == "3":
             # Hablar con el equipo (ahora es la opción 3)
-            mensaje = """
-👥 Contacta a nuestro equipo
-
-📲 WhatsApp: +52 614 558 7289
-
-⚡ Nuestro equipo te ayudará con:
-• Proceso de portabilidad
-• Resolver dudas sobre documentos
-• Verificar tu NIP
-• Completar el trámite
-
-🕒 Horarios de atención:
-• Lunes a Viernes: 9:00 - 18:00
-• Sábados: 9:00 - 14:00
-
-0️⃣ Volver al menú principal
-            """
-            dispatcher.utter_message(text=mensaje)
+            # **CORRECCIÓN NODE-RED**: Múltiples mensajes separados
+            dispatcher.utter_message(text="👥 Contacta a nuestro equipo")
+            dispatcher.utter_message(text="📲 WhatsApp: +52 614 558 7289")
+            dispatcher.utter_message(text="⚡ Nuestro equipo te ayudará con:\n• Proceso de portabilidad\n• Resolver dudas sobre documentos\n• Verificar tu NIP\n• Completar el trámite")
+            dispatcher.utter_message(text="🕒 Horarios de atención:\n• Lunes a Viernes: 9:00 - 18:00\n• Sábados: 9:00 - 14:00")
+            dispatcher.utter_message(text="0️⃣ Volver al menú principal.")
             return [SlotSet("estado_menu", "submenu_portabilidad")]
         
         else:
-            mensaje = """
-Opción no válida. 
-
-1️⃣ ¿Cómo conseguir NIP?
-2️⃣ Documentos necesarios
-3️⃣ Hablar con equipo
-0️⃣ Menú principal
-            """
-            dispatcher.utter_message(text=mensaje)
+            # **CORRECCIÓN NODE-RED**: Múltiples mensajes separados
+            dispatcher.utter_message(text="Opción no válida.")
+            dispatcher.utter_message(text="1️⃣ ¿Cómo conseguir NIP?.\n2️⃣ Documentos necesarios.\n3️⃣ Hablar con equipo.\n0️⃣ Menú principal.")
             return [SlotSet("estado_menu", "submenu_portabilidad")]
     
     def _manejar_submenu_nip(self, dispatcher, numero_opcion):
@@ -1118,7 +1066,7 @@ Una vez que lo tengas, solo escribelo y nuestro equipo lo procesará inmediatame
 También puedes contactarnos por:
 📲 WhatsApp: +52 614 558 7289
 
-0️⃣ Menú principal
+0️⃣ Menú principal.
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_nip")]
@@ -1134,7 +1082,7 @@ Por ahora puedes:
 • Lunes a Viernes: 9:00 - 18:00
 • Sábados: 9:00 - 14:00
 
-0️⃣ Volver al menú principal
+0️⃣ Volver al menú principal.
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_nip")]
@@ -1143,10 +1091,10 @@ Por ahora puedes:
             mensaje = """
 Opción no válida. 
 
-1️⃣ Ya tengo mi NIP, quiero avanzar 🚀
-2️⃣ ¿Dónde lo escribo?
-3️⃣ Quiero hablar con alguien del equipo
-0️⃣ Menú principal
+1️⃣ Ya tengo mi NIP, quiero avanzar.
+2️⃣ ¿Dónde lo escribo?.
+3️⃣ Quiero hablar con alguien del equipo.
+0️⃣ Menú principal.
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_nip")]
@@ -1173,7 +1121,7 @@ Te vamos a conectar con nuestro equipo por WhatsApp:
 
 🕒 Horario: Lunes a Viernes 9:00-18:00
 
-0️⃣ Volver al menú principal
+0️⃣ Volver al menú principal.
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_avanzar_nip")]
@@ -1198,7 +1146,7 @@ Llama directamente a nuestro equipo:
 • Lunes a Viernes: 9:00 - 18:00
 • Sábados: 9:00 - 14:00
 
-0️⃣ Volver al menú principal
+0️⃣ Volver al menú principal.
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_avanzar_nip")]
@@ -1207,9 +1155,9 @@ Llama directamente a nuestro equipo:
             mensaje = """
 Opción no válida.
 
-1️⃣ Continuar por WhatsApp
-2️⃣ Hablar por teléfono
-0️⃣ Volver al menú principal
+1️⃣ Continuar por WhatsApp.
+2️⃣ Hablar por teléfono.
+0️⃣ Volver al menú principal.
             """
             dispatcher.utter_message(text=mensaje)
             return [SlotSet("estado_menu", "submenu_avanzar_nip")]
@@ -1403,8 +1351,7 @@ Si prefieres, puedes escribirnos ahora por WhatsApp: +52 614 558 7289
 0️⃣ Menú principal
             """
             dispatcher.utter_message(text=mensaje_final)
-            
-            # Nuevo mensaje adicional
+            #nuevo mensaje 
             dispatcher.utter_message(text="msj3")
             
             # NO mostrar menú principal automáticamente - solo si el usuario escribe 0
@@ -1431,7 +1378,7 @@ O escribe "0" para volver al menú principal.
             return [SlotSet("estado_menu", "capturar_nombre")]
 
 class ActionDefaultFallback(Action):
-    """Acción de fallback simplificada"""
+    """Acción de fallback mejorada con análisis contextual"""
     
     def name(self) -> Text:
         return "action_default_fallback"
@@ -1440,12 +1387,45 @@ class ActionDefaultFallback(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        mensaje = """🤔 No entendí tu mensaje. 
-Por favor selecciona una opción del menú
-¿En qué puedo ayudarte?"""
+        texto_usuario = tracker.latest_message.get('text', '').lower()
+        estado_actual = tracker.get_slot("estado_menu")
         
-        dispatcher.utter_message(text=mensaje)
-        return []
+        # � ANÁLISIS CONTEXTUAL: Intentar entender la intención
+        palabras_portabilidad = ["portabilidad", "conservar", "mantener", "número", "cambiar", "operador"]
+        palabras_planes = ["planes", "paquetes", "precio", "costo", "tarifa", "oferta", "promoción"]
+        palabras_contacto = ["contacto", "hablar", "persona", "humano", "whatsapp", "teléfono"]
+        
+        if any(palabra in texto_usuario for palabra in palabras_portabilidad):
+            dispatcher.utter_message(text="🎯 ¡Entiendo! Te interesa la portabilidad.")
+            dispatcher.utter_message(text="🔄 PORTABILIDAD")
+            dispatcher.utter_message(text="1️⃣ ¿Cómo conseguir NIP?\n2️⃣ Ya tengo mi NIP\n3️⃣ Volver al menú")
+            dispatcher.utter_message(text="¿Qué opción necesitas?")
+            return [SlotSet("estado_menu", "submenu_portabilidad")]
+            
+        elif any(palabra in texto_usuario for palabra in palabras_planes):
+            dispatcher.utter_message(text="💰 ¡Perfecto! Te interesan nuestros planes.")
+            dispatcher.utter_message(image=ImageConfig.PAQUETES_PROMOCION)
+            dispatcher.utter_message(text="📦 PAQUETES DISPONIBLES")
+            dispatcher.utter_message(text="1️⃣ Plan Ilimitado $220\n2️⃣ Plan Premium $300\n3️⃣ Volver al menú")
+            dispatcher.utter_message(text="¿Qué opción te interesa?")
+            return [SlotSet("estado_menu", "submenu_paquetes")]
+            
+        elif any(palabra in texto_usuario for palabra in palabras_contacto):
+            dispatcher.utter_message(text="👥 ¡Claro! Te conectamos con nuestro equipo.")
+            dispatcher.utter_message(text="📲 WhatsApp: +52 614 558 7289")
+            dispatcher.utter_message(text="⏰ Horarios: Lun-Vie 9-18hrs, Sáb 9-14hrs")
+            dispatcher.utter_message(text="0️⃣ Volver al menú principal")
+            return [SlotSet("estado_menu", "contacto")]
+        
+        # Fallback genérico con sugerencias inteligentes
+        texto_corto = tracker.latest_message.get('text', '')[:30]
+        dispatcher.utter_message(text=f"🤔 No entendí '{texto_corto}...'")
+        dispatcher.utter_message(text="💡 Puedes escribir: 'portabilidad', 'planes' o 'contacto'")
+        dispatcher.utter_message(text="🏠 MENÚ PRINCIPAL")
+        dispatcher.utter_message(text="1️⃣ Conservar mi número\n2️⃣ Ver paquetes\n3️⃣ Hablar con el equipo")
+        dispatcher.utter_message(text="¿Qué opción necesitas?")
+        
+        return [SlotSet("estado_menu", "menu_principal")]
 
 
 class ActionInicioNodeRed(Action):

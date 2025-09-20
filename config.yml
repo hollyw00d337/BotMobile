@@ -7,16 +7,24 @@ pipeline:
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
+  analyzer: char_wb  # Mejora para palabras parciales
+  min_ngram: 1
+  max_ngram: 4
 - name: DIETClassifier
-  epochs: 20
+  epochs: 30  # Aumentado para mejor comprensión
   constrain_similarities: true
   entity_recognition: true
   intent_classification: true
+  dropout_rate: 0.1
+  learning_rate: 0.001
 - name: EntitySynonymMapper
 - name: RegexEntityExtractor
-  use_lookup_tables: false
+  use_lookup_tables: true  # ✅ Activado para usar lookup tables
   use_regexes: true
   use_word_boundaries: true
+- name: FallbackClassifier
+  threshold: 0.7  # Mejora detección de intents poco claros
+  ambiguity_threshold: 0.1
 
 policies:
 - name: MemoizationPolicy
