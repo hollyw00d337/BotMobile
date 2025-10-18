@@ -141,6 +141,41 @@ slots:
     mappings:
       - type: custom
 
+  paquete_seleccionado:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  numero_recarga:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  referencia_pago:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  tipo_pago:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  metodo_pago:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+
 responses:
   utter_despedida:
     - text: "¡Hasta la vista! 👋 Espero haberte ayudado. Regresa cuando gustes."
